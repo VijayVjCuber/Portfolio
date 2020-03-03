@@ -253,6 +253,7 @@ footer p{
 @media only screen and (max-width: 850px) {
   #navbar ul{
     padding: 0;
+    margin: 0;
     display: flex;
     justify-content: space-around;
   }
@@ -270,11 +271,11 @@ footer p{
     padding: 30px 0px;
   }
   #projects{
-  font-size: 18px;
+    font-size: 18px;
   }
   
   hr{
-  margin: 0 10vw;
+    margin: 0 10vw;
   }
   footer p{
     text-align: center;
