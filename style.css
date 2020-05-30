@@ -1,5 +1,7 @@
-*{
-  margin: 0;
+HTML, body{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
 }
 
 html{
@@ -33,6 +35,7 @@ a{
   display: flex;
   flex-direction: row;
   justify-content:flex-end;
+  margin-bottom: 0px;
 }
 
 #navbar li{
@@ -65,6 +68,8 @@ a{
   align-items: center;
   font-size: 55px;
   line-height: 2;
+  padding: 0px;
+  margin: 0px;
 }
 
 #code{
@@ -78,6 +83,7 @@ a{
 
 #wrapper > h1{
   opacity: 0;
+  margin: 0px;
 }
 
 #wrapper > h1:first-child{
@@ -110,19 +116,23 @@ a{
   animation-fill-mode: forwards;
 }
 
+#developer > p{
+  margin: 15px 0px;
+}
+
 
 /* PROJECT_SECTION */
 
 #projects{
-  background-color: #e4eee9;
-  background-image: linear-gradient(315deg, #e4eee9 0%, #93a5ce 74%);
+  background-color: #363946;
   font-size: 30px;
-  height: 100%;
 }
 
 #projects > h1{
   text-align: center;
   padding: 80px 0 20px 0;
+  margin: 0px;
+  color: #ffffff;
 }
 
 
@@ -130,20 +140,21 @@ a{
   position: sticky;
   top:0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 0.5fr));
   grid-gap: 4rem;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 5rem 0 10rem 0;
 }
 
-#project-title{
+.project-tile{
   background-color: #323232;
   color: #ff1500;
   text-align: center;
   border-radius: 0 0 10px 10px;
   box-shadow: 2px 2px 3px black;
+  margin: 0px;
 }
 
 .project-grid img{
@@ -158,6 +169,7 @@ a{
   height: 300px;
   width: 100%;
   padding: 0;
+  margin: 0 20px;
 }
 
 
@@ -182,6 +194,7 @@ a{
 
 #nav-contact li{
   color: #D3D3D3;
+  font-size: 20px;
 }
 
 #nav-contact i{
@@ -195,6 +208,7 @@ hr{
   border: none;
   background-color: grey;
   height: 3px;
+  margin: 0px;
 }
 footer{
   background-color: #000000;
@@ -205,6 +219,7 @@ footer p{
   text-align: right;
   line-height: 3.5;
   font-size: 20px;
+  margin: 0px;
 }
 
 /* ALL_ANIMATIONS */
@@ -253,7 +268,7 @@ footer p{
 @media only screen and (max-width: 850px) {
   #navbar ul{
     padding: 0;
-    margin: 0;
+    margin:0;
     display: flex;
     justify-content: space-around;
   }
@@ -275,7 +290,7 @@ footer p{
   }
   
   hr{
-    margin: 0 10vw;
+  margin: 0 10vw;
   }
   footer p{
     text-align: center;
@@ -283,7 +298,7 @@ footer p{
     font-size: 18px;
   }
   
-  #nav-contact ul{
+  #nav-contact li{
     font-size: 18px;
   }
   #nav-contact i{
