@@ -1,3 +1,11 @@
+body{
+  font-family: 'Crimson Text', serif;
+  overflow-x: hidden;
+  color: var(--welcome-text-color);
+  background: var(--project-bg-color);
+  transition: background 500ms ease-in-out, color 2000ms ease-in-out;
+}
+
 :root{
   --navbar-bg-color: #fff;
   --nav-li-hover: rgba(0, 0, 0, 0.6);
@@ -135,6 +143,7 @@ a{
   line-height: 2;
   padding: 0px;
   margin: 0px;
+  clip-path: polygon(50% 0%, 100% 0px, 100% 78.43%, 50% 100%, 0px 78.56%, 0px 0px);
 }
 
 #code{
@@ -234,7 +243,7 @@ a{
   height: 300px;
   width: 100%;
   padding: 0;
-  margin: 0 20px;
+  margin: 0 40px;
 }
 
 
@@ -256,19 +265,26 @@ a{
   padding: 0;
 }
 
-#nav-contact li{
-  color: var(--contact-color);
-  font-size: 20px;
-}
-
 #nav-contact i{
   display: flex;
   flex-direction: row;
   font-size: 80px;
+  justify-content: center;
+  align-items: center;
 }
+
+#nav-contact a{
+  color: var(--contact-color);
+  font-size: 20px;
+}
+
 
 .fa-linkedin{
   color: #0e76a8;
+}
+
+.fa-instagram{
+  color: purple;
 }
 
 /* FOOTER */
@@ -349,6 +365,7 @@ footer p{
   #welcome-section{
     font-size: 22px;
     line-height: 1.5;
+    clip-path: polygon(50% 0%, 100% 0px, 100% 81.84%, 50% 100%, 0px 81.46%, 0px 1px);
   }
 
   #wrapper{
@@ -379,11 +396,3 @@ footer p{
   }
 }
 
-
-body{
-  font-family: 'Crimson Text', serif;
-  overflow-x: hidden;
-  color: var(--welcome-text-color);
-  background: var(--project-bg-color);
-  transition: background 500ms ease-in-out, color 2000ms ease-in-out;
-}
