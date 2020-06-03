@@ -5,12 +5,22 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
-<body>
+<body class="light">
   <nav id="navbar">
-    <ul>
-      <a href="#welcome-section"><li>About</li></a>
-      <a href="#projects"><li>Work</li></a>
-      <a href="#contact"><li>Contact</li></a>
+    <ul class="main-nav">
+      <li><a href="#welcome-section">About</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="has-dropdown"><a href="#dummydiv">Theme</a>
+        <ul class="dropdown">
+          <li class="dropdown-item">
+            <a href="#dummydiv1" id="light">light</a>
+          </li>
+          <li class="dropdown-item">
+            <a href="#dummydiv2" id="dark">dark</a>
+          </li>
+        </ul>
+      </li>
     </ul>
   </nav>
   <section id="welcome-section">
@@ -54,10 +64,11 @@
   <section id="contact">
     <nav id="nav-contact">
       <ul>
-        <a href="https://www.linkedin.com/in/vijayvjcuber" target="_blank"><li><i class="fa fa-linkedin"></i>LinkedIn</li></a>
         <a href="https://github.com/VijayVjCuber" id="profile-link" target="_blank"><li><i class="fa fa-github" aria-hidden="true"></i>Github</li></a>
         <a href="mailto:vijaygowtham275@gmail.com"><li><i class="fa fa-at"></i>Gmail</li></a>
+        <a href="https://www.linkedin.com/in/vijayvjcuber" target="_blank"><li><i class="fa fa-linkedin"></i>LinkedIn</li></a>
         <a href="tel:7305132455"><li><i class="fa fa-mobile"></i>Mobile</li></a>
+        <a href="https://www.instagram.com/techie_weirdo/" target="_blank"><li><i class="fa fa-instagram"></i>instagram</li></a>
       </ul>
     </nav>
   </section>
@@ -65,4 +76,6 @@
     <hr>
     <p>Copyright � 2020 VijayVjCuber</p>
   </footer>
+  <script src="script.js"></script>
 </body>
+</html>
