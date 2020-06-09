@@ -1,9 +1,10 @@
 body{
+  box-sizing: border-box;
   font-family: 'Crimson Text', serif;
   overflow-x: hidden;
   color: var(--welcome-text-color);
   background: var(--project-bg-color);
-  transition: background 500ms ease-in-out, color 2000ms ease-in-out;
+  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
 :root{
@@ -38,13 +39,15 @@ body{
   --contact-bg-color: #292929;
   --contact-color: #d3d3d3;
   --footer-bg-color: #000000;
-  --footer-text-color: grey;
+  --footer-text-color: #d3d3d3;
 }
 
 HTML, body{
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
 }
 
 html{
@@ -61,7 +64,7 @@ a{
   text-decoration: none;
 }
 
-/* Navigation_Bar */
+/* Navigation_DropDownMenu for Theme */
 .dropdown {
   position: absolute;
   top: 75px;
@@ -72,6 +75,7 @@ a{
   opacity: 0;
   transition: opacity .15s ease-out;
 }
+
 
 .has-dropdown:focus-within .dropdown{
   opacity: 1;
@@ -88,13 +92,16 @@ a{
   margin-right: 8px;
 }
 
+
+/* Navigation-Bar */
+
 #navbar{
   background-color: var(--navbar-bg-color);
   position: fixed;
   top:0;
   width:100%;
   z-index:1;
-  padding: 10px;
+  padding: 0;
   box-shadow: 0 8px 10px -6px black;
 }
 #navbar .main-nav{
@@ -103,6 +110,7 @@ a{
   flex-direction: row;
   justify-content:flex-end;
   margin-bottom: 0px;
+  padding: 10px;
 }
 
 #navbar li{
@@ -113,7 +121,7 @@ a{
 #navbar a{
   font-size: 25px;
   font-weight: bold;
-  padding: 10px 50px;
+  padding: 10px 20px;
   margin-right: 80px;
   color: #fd4900;
 }
@@ -125,6 +133,37 @@ a{
 #navbar a:hover{
   background-color: var(--nav-li-hover);
 }
+
+
+
+
+/* HAMBURGER BUTTON */
+.hamburger{
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+  justify-content: space-evenly;
+}
+
+.hamburger{
+  height: 55px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: none;
+  float: right;
+  box-sizing: border-box;
+}
+
+.bar{
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 25%;
+  height: 3px;
+  width: 30px;
+  display: block;
+}
+
 
 
 /* Welcome_Section */
@@ -143,7 +182,8 @@ a{
   line-height: 2;
   padding: 0px;
   margin: 0px;
-  clip-path: polygon(50% 0%, 100% 0px, 100% 78.43%, 50% 100%, 0px 78.56%, 0px 0px);
+  clip-path: polygon(50% 0%, 100% 0px, 100% 81.84%, 50% 100%, 0px 81.46%, 0px 0px);
+  overflow-y: hidden;
 }
 
 #code{
@@ -226,7 +266,7 @@ a{
   background-color: var(--tile-bg-color);
   color: #fd4900;
   text-align: center;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 40px 40px;
   box-shadow: 2px 2px 3px black;
   margin: 0px;
 }
@@ -235,9 +275,10 @@ a{
   width: 100%;
   height: 100%;
   vertical-align: bottom;
-  border-radius: 10px 10px 0 0;
+  border-radius: 40px 40px 0 0;
   box-shadow: 2px 0px 3px black;
 }
+
 
 .project-grid a{
   height: 300px;
@@ -350,6 +391,11 @@ footer p{
 /* ALL_MEDIA_QUERIES */
 
 @media only screen and (max-width: 980px) {
+  /* #navbar{
+    position: fixed;
+    top: 0;
+  }
+
   #navbar .main-nav{
     padding: 0 0 10px 0;
     margin:0;
@@ -360,12 +406,70 @@ footer p{
     font-size: 20px;
     padding: 20px 30px;
     margin-right: 5px;
+  } */
+
+
+
+
+  .main-nav, #navbar{
+    margin: 0;
+    padding: 0;
+  }
+
+  #light{
+    padding: 0;
+    margin: 0;
+  }
+
+  #navbar a{
+    padding: 10px 20px;
+    margin: 0;
+  }
+
+  .main-nav a{
+    box-sizing: border-box;
+    padding: 10px 50px;
+  }
+
+  .dropdown-item a{
+    padding: 0;
+  }
+
+  #navbar .main-nav{
+    list-style: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 0px;
+    height: 50vh;
+  }
+
+
+  .dropdown {
+    position: absolute;
+    top: 15em;
+    right: 1em;
+    z-index: 3;
+    list-style: none;
+    margin: 0;
+    opacity: 0;
+    transition: opacity .15s ease-out;
+  }
+
+  #navbar .main-nav{
+    display: none;
+  }
+  
+
+  .hamburger{
+    z-index: 4;
+    display: flex;
   }
 
   #welcome-section{
     font-size: 22px;
     line-height: 1.5;
-    clip-path: polygon(50% 0%, 100% 0px, 100% 81.84%, 50% 100%, 0px 81.46%, 0px 1px);
+    clip-path: polygon(50% 0%, 100% 0px, 100% 81.84%, 50% 100%, 0px 81.46%, 0px 0px);
   }
 
   #wrapper{
@@ -396,3 +500,8 @@ footer p{
   }
 }
 
+@media (min-width: 980px) {
+  .main-nav{
+    display: flex!important;
+  }
+}
