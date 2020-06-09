@@ -467,6 +467,8 @@ footer p{
   }
 
   #welcome-section{
+    height: 100vh;
+    width: 100%;
     font-size: 22px;
     line-height: 1.5;
     clip-path: polygon(50% 0%, 100% 0px, 100% 81.84%, 50% 100%, 0px 81.46%, 0px 0px);
