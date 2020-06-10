@@ -91,16 +91,13 @@ a{
   margin-right: 80px;
 }
 
-#navbar a:nth-child(4){
-  margin: 0;
-}
 
-#navbar a:hover{
+#navbar .main-menu:hover{
   background-color: var(--nav-li-hover);
   color: var(--navbar-bg-color)
 }
 
-.main-menu, .dropdown-item a{
+.main-menu, .dropdown a{
   font-size: 25px;
   font-weight: bold;
   color: #fd4900;
@@ -420,7 +417,6 @@ footer p{
 
   .dropdown a{
     padding: 8px;
-    border-radius: 10px;
   }
 
   #navbar .main-nav{
@@ -432,6 +428,8 @@ footer p{
     height: 50vh;
   }
 
+
+  
 
   .dropdown {
     position: absolute;
