@@ -323,7 +323,10 @@ a{
 
 #nav-contact a{
   color: var(--contact-color);
-  font-size: 24px;
+}
+
+#nav-contact li{
+  font-size: 25px;
 }
 
 
@@ -481,10 +484,10 @@ footer p{
   }
   
   #nav-contact li{
-    font-size: 18px;
+    font-size: 20px;
   }
   #nav-contact i{
-    font-size: 20px;
+    font-size: 55px;
   }
 }
 
