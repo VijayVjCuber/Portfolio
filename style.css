@@ -2,14 +2,14 @@ body{
   box-sizing: border-box;
   font-family: 'Crimson Text', serif;
   overflow-x: hidden;
+  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
   color: var(--welcome-text-color);
   background: var(--project-bg-color);
-  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
 :root{
   --navbar-bg-color: #fff;
-  --nav-li-hover: rgba(0, 0, 0, 0.6);
+  --nav-li-hover: #fd4900;
   --welcome-text-color: black;
   --project-bg-color: #eeeeee;
   --tile-bg-color: #1f1f1f;
@@ -21,7 +21,7 @@ body{
 
 .light{
   --navbar-bg-color: #fff;
-  --nav-li-hover: rgba(0, 0, 0, 0.6);
+  --nav-li-hover: #fd4900;
   --welcome-text-color: black;
   --project-bg-color: #eeeeee;
   --tile-bg-color: #1f1f1f;
@@ -32,7 +32,7 @@ body{
 
 .dark{
   --navbar-bg-color: #010b13;
-  --nav-li-hover: rgba(0, 0, 0, 0.8);
+  --nav-li-hover: #fd4900;
   --welcome-text-color: #bb86fc;
   --project-bg-color: #121212;
   --tile-bg-color: #1f1b24;
@@ -64,34 +64,6 @@ a{
   text-decoration: none;
 }
 
-/* Navigation_DropDownMenu for Theme */
-.dropdown {
-  position: absolute;
-  top: 75px;
-  right: 25px;
-  z-index: 3;
-  list-style: none;
-  margin-top: 7px;
-  opacity: 0;
-  transition: opacity .15s ease-out;
-}
-
-
-.has-dropdown:focus-within .dropdown{
-  opacity: 1;
-}
-
-
-.dropdown-item a::before{
-  content: ' ';
-  border: 2px solid white;
-  border-radius: 50%;
-  width: 1rem;
-  height: 1rem;
-  display: inline-block;
-  margin-right: 8px;
-}
-
 
 /* Navigation-Bar */
 
@@ -113,17 +85,10 @@ a{
   padding: 10px;
 }
 
-#navbar li{
-  color: #fd4900;
-}
 
-
-#navbar a{
-  font-size: 25px;
-  font-weight: bold;
+#navbar .main-menu{
   padding: 10px 20px;
   margin-right: 80px;
-  color: #fd4900;
 }
 
 #navbar a:nth-child(4){
@@ -132,9 +97,54 @@ a{
 
 #navbar a:hover{
   background-color: var(--nav-li-hover);
+  color: var(--navbar-bg-color)
+}
+
+.main-menu, .dropdown-item a{
+  font-size: 25px;
+  font-weight: bold;
+  color: #fd4900;
+  border-radius: 10%;
+}
+
+/* Navigation_DropDownMenu for Theme */
+.dropdown {
+  position: absolute;
+  top: 75px;
+  right: 90px;
+  z-index: 3;
+  list-style: none;
+  margin-top: 7px;
+  opacity: 0;
+  transition: opacity .15s ease-out;
 }
 
 
+.has-dropdown:focus-within .dropdown{
+  opacity: 1;
+}
+
+
+.dropdown-item a::before{
+  content: ' ';
+  border: 2px solid #800080;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.dropdown-item #light::before{
+  background: white;
+}
+.dropdown-item #dark::before{
+  background: black;
+}
+
+.dropdown-item a{
+  padding: 3px;
+}
 
 
 /* HAMBURGER BUTTON */
@@ -146,7 +156,7 @@ a{
 }
 
 .hamburger{
-  height: 55px;
+  height: 40px;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -316,7 +326,7 @@ a{
 
 #nav-contact a{
   color: var(--contact-color);
-  font-size: 20px;
+  font-size: 24px;
 }
 
 
@@ -391,37 +401,13 @@ footer p{
 /* ALL_MEDIA_QUERIES */
 
 @media only screen and (max-width: 980px) {
-  /* #navbar{
-    position: fixed;
-    top: 0;
-  }
-
-  #navbar .main-nav{
-    padding: 0 0 10px 0;
-    margin:0;
-    display: flex;
-    justify-content: space-around;
-  }
-  #navbar a{
-    font-size: 20px;
-    padding: 20px 30px;
-    margin-right: 5px;
-  } */
-
-
-
 
   .main-nav, #navbar{
     margin: 0;
     padding: 0;
   }
 
-  #light{
-    padding: 0;
-    margin: 0;
-  }
-
-  #navbar a{
+  #navbar .main-menu{
     padding: 10px 20px;
     margin: 0;
   }
@@ -429,10 +415,12 @@ footer p{
   .main-nav a{
     box-sizing: border-box;
     padding: 10px 50px;
+    border-radius: 0;
   }
 
-  .dropdown-item a{
-    padding: 0;
+  .dropdown a{
+    padding: 8px;
+    border-radius: 10px;
   }
 
   #navbar .main-nav{
@@ -447,8 +435,8 @@ footer p{
 
   .dropdown {
     position: absolute;
-    top: 15em;
-    right: 1em;
+    top: 40vh;
+    right: 10vw;
     z-index: 3;
     list-style: none;
     margin: 0;
