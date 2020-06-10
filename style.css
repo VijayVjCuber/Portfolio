@@ -420,6 +420,7 @@ footer p{
 
   .dropdown a{
     padding: 8px;
+    -webkit-tap-highlight-color: transparent;
   }
 
   #navbar .main-nav{
@@ -487,7 +488,7 @@ footer p{
     font-size: 20px;
   }
   #nav-contact i{
-    font-size: 55px;
+    font-size: 40px;
   }
 }
 
