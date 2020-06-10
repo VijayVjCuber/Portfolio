@@ -7,6 +7,7 @@ body{
   background: var(--project-bg-color);
 }
 
+
 :root{
   --navbar-bg-color: #fff;
   --nav-li-hover: #fd4900;
@@ -62,6 +63,7 @@ img{
 
 a{
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -402,6 +404,11 @@ footer p{
 
 @media only screen and (max-width: 980px) {
 
+
+  a{
+    -webkit-tap-highlight-color: transparent;
+  }
+
   .main-nav, #navbar{
     margin: 0;
     padding: 0;
@@ -418,9 +425,9 @@ footer p{
     border-radius: 0;
   }
 
+
   .dropdown a{
     padding: 8px;
-    -webkit-tap-highlight-color: transparent;
   }
 
   #navbar .main-nav{
