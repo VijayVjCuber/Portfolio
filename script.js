@@ -18,8 +18,10 @@ lightbutton.onclick = () => {
 menu.addEventListener('click', () => {
     if(navbar.style.display === "flex"){
         navbar.style.display = "none";
+        body.classList.remove('cross');
     }
     else{
         navbar.style.display = "flex";
+        body.classList.add('cross');
     }
 })

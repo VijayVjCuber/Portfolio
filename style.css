@@ -463,6 +463,25 @@ footer p{
     display: flex;
   }
 
+  .cross .bar{
+    position: absolute;
+    right: 0.2vw;
+    transition: transform 300ms;
+    background: red;
+  }
+
+  .cross .bar:nth-child(1){
+    transform: rotate(45deg);
+  }
+
+  .cross .bar:nth-child(3){
+    transform: rotate(135deg);
+  }
+
+  .cross .bar:nth-child(2){
+    display: none;
+  }
+
   #welcome-section{
     height: 100vh;
     width: 100%;
