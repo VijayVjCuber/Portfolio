@@ -467,7 +467,7 @@ footer p{
     position: absolute;
     right: 0.2vw;
     transition: transform 300ms;
-    background: red;
+    background: var(--footer-text-color);
   }
 
   .cross .bar:nth-child(1){
