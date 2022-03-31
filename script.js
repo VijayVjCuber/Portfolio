@@ -2,7 +2,8 @@ const darkbutton=document.getElementById("dark");
 const lightbutton=document.getElementById("light");
 const body = document.body;
 const menu = document.getElementsByClassName("hamburger")[0];
-const navbar = document.getElementsByClassName("main-nav")[0];
+const navbar = document.getElementById("main-nav");
+const logo = document.getElementById("logo");
 
 // THEMES
 darkbutton.onclick = () => {
@@ -15,13 +16,21 @@ lightbutton.onclick = () => {
 
 
 // CLICK EVENT FOR HAMBURGER MENU
+
 menu.addEventListener('click', () => {
-    if(navbar.style.display === "flex"){
-        navbar.style.display = "none";
-        body.classList.remove('cross');
+    if(navbar.classList.contains("navbar-hidden")){
+        body.classList.add('cross');
+        navbar.classList.remove("navbar-hidden");
+        navbar.classList.add("navbar-visible");
+        logo.classList.remove("navbar-hidden");
+        logo.classList.add("navbar-visible");
     }
     else{
-        navbar.style.display = "flex";
-        body.classList.add('cross');
+        body.classList.remove('cross');
+        navbar.classList.remove("navbar-visible");
+        navbar.classList.add("navbar-hidden");
+        logo.classList.remove("navbar-visible");
+        logo.classList.add("navbar-hidden");
     }
 })
+

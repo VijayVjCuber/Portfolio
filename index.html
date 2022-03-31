@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <link href="style.css" type="text/css" rel="stylesheet">
@@ -7,26 +8,33 @@
 </head>
 <body class="light">
   <nav id="navbar">
-    <a href="#dummydiv" class="hamburger">
+    <div class="hamburger">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
-    </a>
-    <ul class="main-nav">
-      <li><a href="#welcome-section" class="main-menu">About</a></li>
-      <li><a href="#projects" class="main-menu">Work</a></li>
-      <li><a href="#contact" class="main-menu">Contact</a></li>
-      <li class="has-dropdown"><a href="#dummydiv1" class="main-menu">Theme</a>
-        <ul class="dropdown">
-          <li class="dropdown-item">
-            <a href="#dummydiv2" id="light">light</a>
-          </li>
-          <li class="dropdown-item">
-            <a href="#dummydiv3" id="dark">dark</a>
+    </div>
+    <div id="navigation-bar">
+      <div id="logo" class="navbar-hidden">
+        <img src="Vijay.png">
+      </div>
+      <div id="navbar-main">
+        <ul id="main-nav" class="navbar-hidden">
+          <li><a href="#welcome-section" class="main-menu">About</a></li>
+          <li><a href="#projects" class="main-menu">Work</a></li>
+          <li><a href="#contact" class="main-menu">Contact</a></li>
+          <li class="has-dropdown"><a href="#dummydiv1" class="main-menu">Theme</a>
+            <ul class="dropdown">
+              <li class="dropdown-item">
+                <a href="#dummydiv2" id="light">light</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#dummydiv3" id="dark">dark</a>
+              </li>
+            </ul>
           </li>
         </ul>
-      </li>
-    </ul>
+      </div>
+    </div>
   </nav>
   <section id="welcome-section">
     <div id="wrapper">
