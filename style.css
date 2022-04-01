@@ -115,7 +115,7 @@ a{
 
 .navbar-fixed{
   position: fixed;
-  background-color: white;
+  background-color: var(--navbar-bg-color);
   opacity: 0.9;
 }
 
