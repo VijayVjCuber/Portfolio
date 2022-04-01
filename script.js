@@ -4,9 +4,9 @@ const body = document.body;
 const menu = document.getElementsByClassName("hamburger")[0];
 const navbar = document.getElementById("main-nav");
 
+// Adding navbar fixed after scrolling 
 const nav = document.querySelector("#navigation-bar");
 let nav_height = nav.getBoundingClientRect().height;
-
 window.addEventListener('scroll', () => {
     let scroll_height = window.pageYOffset;
     if(scroll_height>nav_height){
@@ -16,6 +16,31 @@ window.addEventListener('scroll', () => {
         nav.classList.remove("navbar-fixed");
     }
 })
+
+// Navigating buttons
+const about_btn = document.getElementById("about-btn");
+const work_btn = document.getElementById("work-btn");
+const contact_btn = document.getElementById("contact-btn");
+
+// Navigating sections
+const welcomescreen = document.getElementById("welcome-section");
+const projectscreen = document.getElementById("projects");
+const contactscreen = document.getElementById("contact");
+
+// Navigating function
+about_btn.onclick= () => {
+    welcomescreen.scrollIntoView();
+}
+
+work_btn.onclick= () => {
+    projectscreen.scrollIntoView();
+}
+
+contact_btn.onclick= () => {
+    contactscreen.scrollIntoView();
+}
+
+
 
 // THEMES
 darkbutton.onclick = () => {
@@ -32,13 +57,11 @@ lightbutton.onclick = () => {
 menu.addEventListener('click', () => {
     if(navbar.classList.contains("navbar-hidden")){
         body.classList.add('cross');
-        navbar.classList.remove("navbar-hidden");
-        navbar.classList.add("navbar-visible");
+        navbar.classList.replace("navbar-hidden", "navbar-visible");
     }
     else{
         body.classList.remove('cross');
-        navbar.classList.remove("navbar-visible");
-        navbar.classList.add("navbar-hidden");
+        navbar.classList.replace("navbar-visible","navbar-hidden");
     }
 })
 

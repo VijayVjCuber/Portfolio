@@ -119,9 +119,10 @@ a{
   opacity: 0.9;
 }
 
-#navbar .main-menu:hover{
+.main-menu:hover{
   background-color: var(--nav-li-hover);
   color: var(--navbar-bg-color)
+  cursor: pointer;
 }
 
 .main-menu, .dropdown a{
