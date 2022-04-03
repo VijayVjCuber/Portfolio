@@ -5,6 +5,7 @@ body{
   transition: background 500ms ease-in-out, color 1000ms ease-in-out;
   color: var(--welcome-text-color);
   background: var(--project-bg-color);
+  user-select: none;
 }
 
 
@@ -115,41 +116,38 @@ a{
 
 .navbar-fixed{
   position: fixed;
-  background-color: white;
+  background-color: var(--navbar-bg-color);
   opacity: 0.9;
 }
 
-#navbar .main-menu:hover{
+
+.main-menu:hover{
   background-color: var(--nav-li-hover);
   color: var(--navbar-bg-color)
 }
 
-.main-menu, .dropdown a{
+.main-menu, .dropdown{
   font-size: 25px;
   font-weight: bold;
   color: #fd4900;
   border-radius: 12px;
 }
 
+.main-menu{
+  cursor: pointer;
+}
+
 /* Navigation_DropDownMenu for Theme */
 .dropdown {
   position: absolute;
   top: 75px;
-  right: 90px;
+  right: 25px;
   z-index: 3;
   list-style: none;
   margin-top: 7px;
-  opacity: 0;
-  transition: opacity .15s ease-out;
 }
 
-
-.has-dropdown:focus-within .dropdown{
-  opacity: 1;
-}
-
-
-.dropdown-item a::before{
+.dropdown-item label::before{
   content: ' ';
   border: 2px solid #800080;
   border-radius: 50%;
@@ -166,10 +164,21 @@ a{
   background: black;
 }
 
-.dropdown-item a{
+.dropdown-item label{
   padding: 3px;
 }
 
+.drop-visible{
+  visibility: visible;
+}
+
+.drop-hidden{
+  visibility: hidden;
+}
+
+.navbar-fixed .dropdown{
+  right: 80px;
+}
 
 /* HAMBURGER BUTTON */
 .hamburger{
@@ -290,7 +299,7 @@ a{
 
 
 .project-grid{
-  position: sticky;
+  position: relative;
   top:0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 0.25fr));
@@ -450,6 +459,7 @@ footer p{
 
   #logo{
     display: block;
+    position: absolute;
   }
 
   #navigation-bar{
@@ -497,13 +507,11 @@ footer p{
 
   .dropdown {
     position: absolute;
-    top: 40vh;
-    right: 10vw;
+    top: 55vh;
+    right: 30vw;
     z-index: 3;
     list-style: none;
     margin: 0;
-    opacity: 0;
-    transition: opacity .15s ease-out;
   }
   
 
