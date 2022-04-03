@@ -17,6 +17,29 @@ window.addEventListener('scroll', () => {
     }
 })
 
+// Dropdown menu for Theme
+const has_dropdown = document.getElementsByClassName("has-dropdown")[0];
+const dropdown = document.getElementsByClassName("dropdown")[0];
+
+has_dropdown.onclick = () => {
+    if(dropdown.classList.contains("drop-hidden")){
+        dropdown.classList.replace("drop-hidden","drop-visible");
+    }
+    else{
+        dropdown.classList.replace("drop-visible","drop-hidden");
+    }
+}
+
+// THEMES
+darkbutton.onclick = () => {
+    body.classList.replace('light', 'dark');
+}
+
+lightbutton.onclick = () => {
+    body.classList.replace('dark', 'light');
+}
+
+
 // Navigating buttons
 const about_btn = document.getElementById("about-btn");
 const work_btn = document.getElementById("work-btn");
@@ -42,14 +65,6 @@ contact_btn.onclick= () => {
 
 
 
-// THEMES
-darkbutton.onclick = () => {
-    body.classList.replace('light', 'dark');
-}
-
-lightbutton.onclick = () => {
-    body.classList.replace('dark', 'light');
-}
 
 
 // CLICK EVENT FOR HAMBURGER MENU
