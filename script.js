@@ -6,14 +6,22 @@ const navbar = document.getElementById("main-nav");
 
 // Adding navbar fixed after scrolling 
 const nav = document.querySelector("#navigation-bar");
+const goto_top = document.querySelector("#go-to-top");
 let nav_height = nav.getBoundingClientRect().height;
 window.addEventListener('scroll', () => {
     let scroll_height = window.pageYOffset;
+    console.log(scroll_height);
     if(scroll_height>nav_height){
         nav.classList.add("navbar-fixed");
     }
     else{
         nav.classList.remove("navbar-fixed");
+    }
+    if(scroll_height>1650){
+        goto_top.classList.add("go-to-btn-visible");
+    }
+    else{
+        goto_top.classList.remove("go-to-btn-visible");
     }
 })
 
@@ -61,6 +69,10 @@ work_btn.onclick= () => {
 
 contact_btn.onclick= () => {
     contactscreen.scrollIntoView();
+}
+
+goto_top.onclick = () =>{
+    welcomescreen.scrollIntoView();
 }
 
 

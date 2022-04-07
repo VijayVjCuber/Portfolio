@@ -403,6 +403,20 @@ footer p{
   margin: 0px;
 }
 
+#go-to-top{
+  height: 25px;
+  width: 25px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.go-to-btn-visible{
+  visibility: visible !important;
+}
+
 /* ALL_ANIMATIONS */
 @keyframes fadeIn {
   from {
