@@ -17,7 +17,7 @@ window.addEventListener('scroll', () => {
     else{
         nav.classList.remove("navbar-fixed");
     }
-    if(scroll_height>1650){
+    if(scroll_height>1500){
         goto_top.classList.add("go-to-btn-visible");
     }
     else{
