@@ -298,6 +298,7 @@ a{
   width: 100%;
   max-width: 1000px;
   justify-content: center;
+  justify-items: center;
 }
 
 .project-tile{
@@ -448,16 +449,18 @@ footer p{
     padding: 0;
   }
 
-  #logo{
+  /* #logo{
     display: block;
-  }
+  } */
 
   #navigation-bar{
+    position: fixed;
     flex-direction: column;
   }
 
   #navigation-bar{
     background-color: white;
+    position: absolute;
   }
 
   #navbar .main-menu{
