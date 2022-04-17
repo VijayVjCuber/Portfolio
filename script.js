@@ -8,16 +8,17 @@ const navbar = document.getElementById("main-nav");
 const nav = document.querySelector("#navigation-bar");
 const goto_top = document.querySelector("#go-to-top");
 let nav_height = nav.getBoundingClientRect().height;
+let screen_height = document.getElementById("contact").offsetTop;
+
 window.addEventListener('scroll', () => {
     let scroll_height = window.pageYOffset;
-    console.log(scroll_height);
     if(scroll_height>nav_height){
         nav.classList.add("navbar-fixed");
     }
     else{
         nav.classList.remove("navbar-fixed");
     }
-    if(scroll_height>1500){
+    if(scroll_height>(screen_height)){
         goto_top.classList.add("go-to-btn-visible");
     }
     else{
