@@ -219,6 +219,7 @@ a{
 
 .light #welcome-section{
   background-image: url(../Images/Vijay_Prof.jpg);
+  background-size: cover;
 }
 
 .dark #welcome-section{
@@ -449,7 +450,6 @@ footer{
   color: var(--footer-text-color);
 }
 footer p{
-  padding-right: 20px;
   text-align: center;
   line-height: 3.5;
   font-size: 20px;
@@ -620,6 +620,11 @@ footer p{
     clip-path: polygon(50% 0%, 100% 0px, 100% 75%, 50% 90%, 0px 75%, 0px 0px);
   }
 
+  /* Work Experience Section */
+  #work-experience-section{
+    padding: 20px;
+  }
+
   #wrapper{
     margin-top: 0px;
   }
@@ -649,6 +654,16 @@ footer p{
   }
   #nav-contact i{
     font-size: 33px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #wrapper{
+    margin-left: 13%;
+  }
+
+  footer p{
+    font-size: 16px;
   }
 }
 

@@ -7,7 +7,7 @@ const navbar = document.getElementById("main-nav");
 // Adding navbar fixed after scrolling 
 const nav = document.querySelector("#navigation-bar");
 const goto_top = document.querySelector("#go-to-top");
-let nav_height = nav.getBoundingClientRect().height;
+let nav_height = body.getBoundingClientRect().height;
 let screen_height = document.getElementById("contact").offsetTop;
 
 window.addEventListener('scroll', () => {
