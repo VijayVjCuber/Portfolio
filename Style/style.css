@@ -224,6 +224,7 @@ a{
 
 .dark #welcome-section{
   background-image: url(../Images/Vijay_ProfDark.jpg);
+  background-size: cover;
 }
 
 
@@ -238,7 +239,7 @@ a{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 55px;
+  font-size: 50px;
   padding: 0px;
   margin: 0px;
   clip-path: polygon(50% 0%, 100% 0px, 100% 81.84%, 50% 100%, 0px 81.46%, 0px 0px);
@@ -321,7 +322,7 @@ a{
   
   width: 2px;
   height: 250px;
-  background-color: #333; /* Or your brand color */
+  background-color: #333; /* Or brand color */
   transform: scaleY(0); /* Start with no height */
   transform-origin: top; /* Make the line extend from the top */
   transition: transform 3s ease-in-out; /* The animation */
@@ -664,6 +665,13 @@ footer p{
 
   footer p{
     font-size: 16px;
+  }
+
+  #nav-contact li{
+    font-size: 14px;
+  }
+  #nav-contact i{
+    font-size: 20px;
   }
 }
 
