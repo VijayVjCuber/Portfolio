@@ -219,17 +219,15 @@ a{
 
 .light #welcome-section{
   background-image: url(../Images/Vijay_Prof.jpg);
-  background-size: cover;
 }
 
 .dark #welcome-section{
   background-image: url(../Images/Vijay_ProfDark.jpg);
-  background-size: cover;
 }
 
 
 #welcome-section{
-  background-size: 150% 150%;
+  background-size: 150% 140%;
   background-position: 55% 80%;
   background-attachment: fixed;
   color: rgb(242, 249, 188);
@@ -672,8 +670,14 @@ footer p{
 }
 
 @media only screen and (max-width: 480px) {
+  #welcome-section{
+    background-size: 350%;
+    background-position: 48% 93%;
+    font-size: 14px;
+  }
+  
   #wrapper{
-    margin-left: 13%;
+    margin-left: 10%;
   }
 
   footer{
@@ -690,6 +694,8 @@ footer p{
   #nav-contact i{
     font-size: 20px;
   }
+
+
 }
 
 /* @media (min-width: 1280px) {
