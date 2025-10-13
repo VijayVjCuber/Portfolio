@@ -22,7 +22,7 @@ body{
 }
 
 .light{
-  --navbar-bg-color: #f4e4c8;
+  --navbar-bg-color: rgb(244, 228, 200);
   --nav-li-hover: #fd4900;
   --project-text-color: black;
   --project-bg-color: #FDFCE8;
@@ -33,7 +33,7 @@ body{
 }
 
 .dark{
-  --navbar-bg-color: #1e1e1e;
+  --navbar-bg-color: rgb(31, 31, 31);
   --nav-li-hover: #fd4900;
   --project-text-color: rgb(242, 249, 188);
   --project-bg-color: #252526;
@@ -71,7 +71,7 @@ a{
 /* Navigation-Bar */
 
 #navbar{
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgb(0, 0, 0, 0);
   position: absolute;
   top:0;
   width:100%;
@@ -128,7 +128,7 @@ a{
 
 .main-menu:hover{
   background-color: var(--nav-li-hover);
-  color: var(--navbar-bg-color)
+  color: var(--navbar-bg-color);
 }
 
 .main-menu, .dropdown{
@@ -274,7 +274,7 @@ a{
 
 #code > span{
   font-weight: bold;
-  color: white
+  color: white;
   text-shadow: -1px -1px 0 #000;
 }
 
@@ -365,6 +365,14 @@ a{
   justify-items: center;
 }
 
+.project-grid a{
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-grid a:hover{
+  transform: scale(1.1);
+}
+
 .project-tile{
   background-color: var(--tile-bg-color);
   color: #fd4900;
@@ -425,6 +433,11 @@ a{
 
 #nav-contact li{
   font-size: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#nav-contact li:hover{
+  transform: scale(1.2);
 }
 
 .fa{

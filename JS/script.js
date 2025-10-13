@@ -10,22 +10,6 @@ const goto_top = document.querySelector("#go-to-top");
 let nav_height = nav.getBoundingClientRect().height;
 
 
-window.addEventListener('scroll', () => {
-    let scroll_height = window.pageYOffset;
-    if(scroll_height>nav_height){
-        nav.classList.add("navbar-fixed");
-    }
-    else{
-        nav.classList.remove("navbar-fixed");
-    }
-    // if(scroll_height>screen_height){
-    //     goto_top.classList.add("go-to-btn-visible");
-    // }
-    // else{
-    //     goto_top.classList.remove("go-to-btn-visible");
-    // }
-})
-
 // Dropdown menu for Theme
 const has_dropdown = document.getElementsByClassName("has-dropdown")[0];
 const dropdown = document.getElementsByClassName("dropdown")[0];
@@ -52,10 +36,12 @@ lightbutton.onclick = () => {
 // Navigating buttons
 const about_btn = document.getElementById("about-btn");
 const work_btn = document.getElementById("work-btn");
+const personal_btn = document.getElementById("personal-btn");
 const contact_btn = document.getElementById("contact-btn");
 
 // Navigating sections
 const welcomescreen = document.getElementById("welcome-section");
+const workscreen = document.getElementById("work-experience-section");
 const projectscreen = document.getElementById("projects");
 const contactscreen = document.getElementById("contact");
 
@@ -65,6 +51,10 @@ about_btn.onclick= () => {
 }
 
 work_btn.onclick= () => {
+    workscreen.scrollIntoView();
+}
+
+personal_btn.onclick= () => {
     projectscreen.scrollIntoView();
 }
 
@@ -145,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', () => {
     let screen_height = document.getElementById("contact").offsetTop;
     let scroll_height = window.pageYOffset;
-    if(scroll_height>nav_height){
+    if(scroll_height>(nav_height/1.3)){
         nav.classList.add("navbar-fixed");
     }
     else{
