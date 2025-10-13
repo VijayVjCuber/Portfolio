@@ -594,8 +594,8 @@ footer p{
 
   .dropdown {
     position: absolute;
-    top: 55vh;
-    right: 30vw;
+    top: 54vh;
+    right: 8vw;
     z-index: 3;
     list-style: none;
     margin: 0;
@@ -674,6 +674,10 @@ footer p{
 @media only screen and (max-width: 480px) {
   #wrapper{
     margin-left: 13%;
+  }
+
+  footer{
+    height: 50px;
   }
 
   footer p{
