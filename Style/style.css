@@ -125,6 +125,10 @@ a{
   border-radius: 0 0 0 15px;
 }
 
+.main-menu{
+  cursor: pointer;
+  transition: background-color 180ms ease-in;
+}
 
 .main-menu:hover{
   background-color: var(--nav-li-hover);
@@ -138,9 +142,6 @@ a{
   border-radius: 12px;
 }
 
-.main-menu{
-  cursor: pointer;
-}
 
 /* Navigation_DropDownMenu for Theme */
 .dropdown {
@@ -227,7 +228,7 @@ a{
 
 
 #welcome-section{
-  background-size: 150% 140%;
+  background-size: 135% 140%;
   background-position: 55% 80%;
   background-attachment: fixed;
   color: rgb(242, 249, 188);
